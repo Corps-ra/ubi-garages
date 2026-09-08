@@ -3,7 +3,8 @@ Fivem Garage Scirpt for ESX framework
 fivem esx garage inspired nopixel 3.0
 
 Script Required
-1.PolyZone https://github.com/mkafrin/PolyZone
-2.bt-Polyzone https://github.com/brentN5/bt-polyzone
+PolyZone https://github.com/mkafrin/PolyZone
+bt-Polyzone https://github.com/brentN5/bt-polyzone
+nh-context https://github.com/nighmares/nh-context
 
 preview : https://www.youtube.com/watch?v=RSOmnsx9i0c
