@@ -401,8 +401,8 @@ end)
 -- civ garage
 RegisterNetEvent("ubi-garage:Opengarageall")
 AddEventHandler("ubi-garage:Opengarageall", function()
-	print(currentLoc)
-OpenGarageAll()
+	if not IsPedSittingInAnyVehicle(PlayerPedId()) then
+		OpenGarageAll()
 end)
 
 function OpenGarageAll()
@@ -655,6 +655,7 @@ end
 -- stored vehicle
 RegisterNetEvent('ubi-garage:StoreOwnedVehicle')
 AddEventHandler('ubi-garage:StoreOwnedVehicle', function()
+	if IsPedSittingInAnyVehicle(PlayerPedId()) then
 	StoreOwnedVehicle()
 end)
 
