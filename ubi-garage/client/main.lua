@@ -263,8 +263,8 @@ end
 
 
 -- End of Ambulance Code
-RegisterNetEvent('advancedGarage:OpenJobGarageRadial')
-AddEventHandler('advancedGarage:OpenJobGarageRadial', function()
+RegisterNetEvent('ubi-garage:OpenJobGarageRadial')
+AddEventHandler('ubi-garage:OpenJobGarageRadial', function()
 	if ESX.PlayerData.job and ESX.PlayerData.job.name == 'police' then
 		if not IsPedSittingInAnyVehicle(PlayerPedId()) then
 			OpenPoliceGarageMenu()
@@ -367,7 +367,7 @@ AddEventHandler("policegarage:menu", function()
 				id= 1,
 				header = "Open garage",
 				context = "Open police garage",
-				event = "advancedGarage:OpenJobGarageRadial"
+				event = "ubi-garage:OpenJobGarageRadial"
 			},
 			{
 				id= 2,
@@ -387,7 +387,7 @@ AddEventHandler("EMSgarage:menu", function()
 				id= 1,
 				header = "Open garage",
 				context = "Open EMS garage",
-				event = "advancedGarage:OpenJobGarageRadial"
+				event = "ubi-garage:OpenJobGarageRadial"
 			},
 			{
 				id= 2,
@@ -399,8 +399,8 @@ AddEventHandler("EMSgarage:menu", function()
 	end
 end)
 -- civ garage
-RegisterNetEvent("advancedGarage:Opengarageall")
-AddEventHandler("advancedGarage:Opengarageall", function()
+RegisterNetEvent("ubi-garage:Opengarageall")
+AddEventHandler("ubi-garage:Opengarageall", function()
 	print(currentLoc)
 OpenGarageAll()
 end)
@@ -653,12 +653,12 @@ end
 
 
 -- stored vehicle
-RegisterNetEvent('advancedGarage:StoreOwnedPoliceRadial')
-AddEventHandler('advancedGarage:StoreOwnedPoliceRadial', function()
-	StoreOwnedPoliceMenu()
+RegisterNetEvent('ubi-garage:StoreOwnedVehicle')
+AddEventHandler('ubi-garage:StoreOwnedVehicle', function()
+	StoreOwnedVehicle()
 end)
 
-function StoreOwnedPoliceMenu()
+function StoreOwnedVehicle()
 	local playerPed  = GetPlayerPed(-1)
 
 	if IsPedInAnyVehicle(playerPed,  false) then

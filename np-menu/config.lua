@@ -692,7 +692,7 @@ rootMenuConfig =  {
         id = "vehicle-vehicleList",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return  not isDead and atGarageCiv() and not IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -701,7 +701,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehicle",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and atGarageCiv() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -710,7 +710,7 @@ rootMenuConfig =  {
         id = "vehicle-vehicleListpoliceGarageSheriff",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return  not isDead and atpolicegarageSheriff() and not IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -719,7 +719,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclepoliceGarageSheriff",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and atpolicegarageSheriff() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -728,7 +728,7 @@ rootMenuConfig =  {
         id = "vehicle-vehicleListesandygarage",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return  not isDead and atsandygarage() and not IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -738,7 +738,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehicleelegigarage",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and elginGarage() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -748,7 +748,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesandy",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and atsandygarage() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -758,7 +758,7 @@ rootMenuConfig =  {
         id = "vehicle-vehicleListpalto",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return  not isDead and atpaletogarage() and not IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -767,7 +767,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclepaleto",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and atpaletogarage() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -777,7 +777,7 @@ rootMenuConfig =  {
         id = "vehicle-vehicleListpalto",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return  not isDead and atimpoundparking() and not IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -786,7 +786,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclepaleto",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return  not isDead and atimpoundparking() and IsPedInAnyVehicle(PlayerPedId(), false)
         end
@@ -810,7 +810,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesdwadambluance",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return not isDead and atambualancegarage() and PlayerData.job.name == 'ambulance' and IsPedInAnyVehicle(PlayerPedId(), false) 
         end
@@ -829,7 +829,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesdwadpolice",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return not isDead and atpolicegarage() and PlayerData.job.name == 'police' and IsPedInAnyVehicle(PlayerPedId(), false) 
         end
@@ -839,7 +839,7 @@ rootMenuConfig =  {
         id = "vehicle-vehiclesdadwapolice",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return not isDead and atcasinogarage() and not IsPedInAnyVehicle(PlayerPedId(), false)  
         end
@@ -848,7 +848,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesdwadpolice",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return not isDead and atcasinogarage() and IsPedInAnyVehicle(PlayerPedId(), false) 
         end
@@ -858,7 +858,7 @@ rootMenuConfig =  {
         id = "vehicle-vehiclesdadwapolice",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return not isDead and atkotgarage() and not IsPedInAnyVehicle(PlayerPedId(), false)  
         end
@@ -867,7 +867,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesdwadpolice",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return not isDead and atkotgarage() and IsPedInAnyVehicle(PlayerPedId(), false) 
         end
@@ -877,7 +877,7 @@ rootMenuConfig =  {
         id = "vehicle-vehiclesdadwapolice",
         displayName = "Garage",
         icon = "#vehicle-vehicleList",
-         functionName = "advancedGarage:Opengarageall",
+         functionName = "ubi-garage:Opengarageall",
          enableMenu = function()
             return not isDead and atbankgarage() and not IsPedInAnyVehicle(PlayerPedId(), false)  
         end
@@ -886,7 +886,7 @@ rootMenuConfig =  {
         id = "vehicle-parkvehiclesdwadpolice",
         displayName = "Parking Vehicle",
         icon = "#mechanic-impon",
-         functionName = "advancedGarage:StoreOwnedPoliceRadial",
+         functionName = "ubi-garage:StoreOwnedVehicle",
          enableMenu = function()
             return not isDead and atbankgarage() and IsPedInAnyVehicle(PlayerPedId(), false) 
         end
@@ -1577,7 +1577,7 @@ newSubMenus = {
     -- ['garage:putaway'] = {
     --     title = "Put Away",
     --     icon = "#blips-garages",
-    --     functionName = "advancedGarage:StoreOwnedPoliceRadial"
+    --     functionName = "ubi-garage:StoreOwnedVehicle"
     -- },
     -- ['garage:takeout'] = {
     --     title = "Take Out",
@@ -1587,7 +1587,7 @@ newSubMenus = {
     -- ['garageCiv:putaway'] = {
     --     title = "Put Away",
     --     icon = "#blips-garages",
-    --     functionName = "advancedGarage:StoreOwnedPoliceRadial"
+    --     functionName = "ubi-garage:StoreOwnedVehicle"
     -- },
     -- ['garageCiv:takeout'] = {
     --     title = "Take Out",
