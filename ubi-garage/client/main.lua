@@ -195,38 +195,11 @@ local locBooleans = {
 
 --  end
 
-
-RegisterNetEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(xPlayer)
-	if Config.Pvt.Garages then
-		ESX.TriggerServerCallback('ubi-garage:getOwnedProperties', function(properties)
-			userProperties = properties
-			DeletePrivateBlips()
-			RefreshPrivateBlips()
-		end)
-	end
-	ESX.PlayerData = xPlayer
-	-- RefreshJobBlips()
-end)
-
 RegisterNetEvent('esx:setJob')
 AddEventHandler('esx:setJob', function(job)
     ESX.PlayerData.job = job
 	-- DeleteJobBlips()
 	-- RefreshJobBlips()
-end)
-
-RegisterNetEvent('ubi-garage:getPropertiesC')
-AddEventHandler('ubi-garage:getPropertiesC', function(xPlayer)
-	if Config.Pvt.Garages then
-		ESX.TriggerServerCallback('ubi-garage:getOwnedProperties', function(properties)
-			userProperties = properties
-			DeletePrivateBlips()
-			RefreshPrivateBlips()
-		end)
-		exports['mythic_notify']:SendAlert('inform', 'Getting Private Garages!')
-		TriggerServerEvent('ubi-garage:printGetProperties')
-	end
 end)
 
 RegisterNetEvent('bt-polyzone:enter')
@@ -800,12 +773,10 @@ function StoreVehicle(vehicle, vehicleProps, location, data)
 	local name = GetLabelText(displaytext)
 	local modelveh = GetEntityModel(veh)
 	TriggerServerEvent('ubi-garage:setVehiclename', vehicleProps.plate, name)
+	
+	currentFuel = exports['LegacyFuel']:GetFuel(vehicle)
+	TriggerServerEvent('ubi-garage:setVehicleFuel', vehicleProps.plate, currentFuel)
 
-
-	if Config.Main.LegacyFuel then
-		currentFuel = exports['LegacyFuel']:GetFuel(vehicle)
-		TriggerServerEvent('ubi-garage:setVehicleFuel', vehicleProps.plate, currentFuel)
-	end
 	TriggerServerEvent('ubi-garage:setvehmodel', modelveh, vehicleProps.plate)
 	TriggerEvent("hud:seatbelt")
 	Wait(500)
@@ -892,47 +863,6 @@ AddEventHandler('onResourceStop', function(resource)
 		TriggerEvent('nh-context:closeMenu')
 	end
 end)
-
-
-
--- Handles Private Blips
-function DeletePrivateBlips()
-	if PrivateBlips[1] ~= nil then
-		for i=1, #PrivateBlips, 1 do
-			RemoveBlip(PrivateBlips[i])
-			PrivateBlips[i] = nil
-		end
-	end
-end
-
-function RefreshPrivateBlips()
-	for zoneKey,zoneValues in pairs(Config.PrivateCarGarages) do
-		if zoneValues.Private and has_value(userProperties, zoneValues.Private) then
-			local blip = AddBlipForCoord(zoneValues.Marker)
-
-			SetBlipSprite (blip, Config.Blips.PGarages.Sprite)
-			SetBlipColour (blip, Config.Blips.PGarages.Color)
-			SetBlipDisplay(blip, Config.Blips.PGarages.Display)
-			SetBlipScale  (blip, Config.Blips.PGarages.Scale)
-			SetBlipAsShortRange(blip, true)
-
-			BeginTextCommandSetBlipName("STRING")
-			AddTextComponentString(_U('blip_garage_private'))
-			EndTextCommandSetBlipName(blip)
-			table.insert(PrivateBlips, blip)
-		end
-	end
-end
-
--- Handles Job Blips
-function DeleteJobBlips()
-	if JobBlips[1] ~= nil then
-		for i=1, #JobBlips, 1 do
-			RemoveBlip(JobBlips[i])
-			JobBlips[i] = nil
-		end
-	end
-end
 
 function AddTextEntry(key, value)
     Citizen.InvokeNative(GetHashKey("ADD_TEXT_ENTRY"), key, value)
