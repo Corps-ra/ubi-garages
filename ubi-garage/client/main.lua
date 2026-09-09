@@ -774,7 +774,7 @@ function StoreVehicle(vehicle, vehicleProps, location, data)
 	local modelveh = GetEntityModel(veh)
 	TriggerServerEvent('ubi-garage:setVehiclename', vehicleProps.plate, name)
 	
-	currentFuel = exports['LegacyFuel']:GetFuel(vehicle)
+	local currentFuel = exports['LegacyFuel']:GetFuel(vehicle)
 	TriggerServerEvent('ubi-garage:setVehicleFuel', vehicleProps.plate, currentFuel)
 
 	TriggerServerEvent('ubi-garage:setvehmodel', modelveh, vehicleProps.plate)
