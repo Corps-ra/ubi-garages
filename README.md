@@ -1,6 +1,6 @@
 # ubi-garages
 Fivem Garage Scirpt for ESX framework
-fivem esx garage inspired nopixel 3.0
+inspired nopixel 3.0
 
 Script Required
 
