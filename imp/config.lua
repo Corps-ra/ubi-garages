@@ -1,11 +1,6 @@
 Config = {}
 
-Config.Locale = 'en'
 
-Config.EnableVersionCheck = true -- If set to true you'll get a print in server console when your resource is out of date
-Config.VersionCheckInterval = 60 -- in minutes
-
-Config.DefaultGaragePed = `s_m_y_airworker`
 Config.DefaultImpoundPed = `s_m_y_construct_01`
 
 Config.BlipColors = {
@@ -78,25 +73,6 @@ Config.Impounds = {
             vector4(1746.85, 3252.57, 42.30, 105.58),
         }
     },
-    --[[
-        TEMPLATE:
-        {
-            label = "", -- Display label for the impound (Optional)
-            type = 'car', -- can be 'car', 'boat' or 'aircraft',
-            ped = `ped_model_name` -- Define the model model you want to use for the impound (Optional)
-            BlipsCoords = vector4(x, y, z, h), -- Ped MUST be inside the create zone
-            zone = {name = 'somename', x = X, y = X, z = X, l = X, w = X, h = X, minZ = X, maxZ = x}, -- l is length of the box zone, w is width, h is heading, take all walues from generated zone from /pzcreate
-            blip = { -- Define specific blip setting for this impound (Optional)
-                scale = 0.8,
-                sprite = 285,
-                colour = 3
-            },
-            spawns = { -- You can have as many as you'd like
-                vector4(x, y, z, h),
-                vector4(x, y, z, h)
-            }
-        },
-    ]]
 }
 
   
