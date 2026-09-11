@@ -35,6 +35,7 @@ Config.ImpoundPrices = {
     ['21'] = 0 -- Trains (lol)
 }
 
+
 Config.PayInCash = true-- whether you want to pay impound price in cash, otherwise uses bank
 
 Config.Impounds = {
