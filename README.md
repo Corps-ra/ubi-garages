@@ -13,4 +13,4 @@ nh-context https://github.com/nighmares/nh-context
 # preview 
 https://www.youtube.com/watch?v=RSOmnsx9i0c
 
-the impound script cooming soon..
+the impound script is out...
