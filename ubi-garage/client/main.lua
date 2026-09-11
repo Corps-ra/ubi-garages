@@ -376,6 +376,7 @@ RegisterNetEvent("ubi-garage:Opengarageall")
 AddEventHandler("ubi-garage:Opengarageall", function()
 	if not IsPedSittingInAnyVehicle(PlayerPedId()) then
 		OpenGarageAll()
+	end
 end)
 
 function OpenGarageAll()
@@ -630,6 +631,7 @@ RegisterNetEvent('ubi-garage:StoreOwnedVehicle')
 AddEventHandler('ubi-garage:StoreOwnedVehicle', function()
 	if IsPedSittingInAnyVehicle(PlayerPedId()) then
 	StoreOwnedVehicle()
+	end
 end)
 
 function StoreOwnedVehicle()

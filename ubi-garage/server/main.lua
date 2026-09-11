@@ -7,12 +7,6 @@ MySQL.ready(function()
 	print("ubi-garage: set all vehicle in outside to impound")
 end)
 
-if Config.Main.Commands then
-	ESX.RegisterCommand('getgarages', 'user', function(xPlayer, args, showError)
-		xPlayer.triggerEvent('ubi-garage:getPropertiesC')
-	end, true, {help = 'Get Private Garages', validate = false})
-end
-
 RegisterServerEvent('ubi-garage:printGetProperties')
 AddEventHandler('ubi-garage:printGetProperties', function()
 	print('Getting Properties')
